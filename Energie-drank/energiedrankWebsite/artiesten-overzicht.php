@@ -57,10 +57,10 @@
         if ($conn->connect_error) {
             die("Connection failed " . $conn->connect_error);
         }
-        $artiesten = "SELECT * FROM artiesten";
+        $artiesten = "SELECT * FROM artiesten Limit 3";
         if ($result = $conn->query($artiesten)) {
             while ($row = $result->fetch_array(MYSQLI_BOTH)) {
-                echo "<a class= 'jood'" . $row[0] . "'>" . $row[1] . "</a>" . "<br>";
+                echo "<a class= 'jood' href='artiesten-details.php?id=" . $row[0] . "'>" . $row[1] . "</a>" . "<br>";
             }
             $result->close();
         }
