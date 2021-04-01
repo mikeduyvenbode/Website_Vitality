@@ -104,26 +104,20 @@
     padding: 40px;
   }
 
-  .blokje {
-    width: 100px;
-    height: 100px;
+  .artiesten {
+    width: 200px;
+    height: 300px;
     position: absolute;
     margin-top: 25vh;
     margin-left: 10vh;
     z-index: 99;
-    background-color: purple;
+    background-color:green;
   }
 
-  .blokje2 {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    margin-top: 25vh;
-    margin-left: 10vh;
-    z-index: 99;
-    background-color: purple;
+  .jood {
+      color: black;
+      line-height: 35px;
   }
-
   .bigscreen-nav a:hover {color: #F38581;}
 /*Niet boven coderen! Beneden hier en Gebruik [ position: absolute ] als je bijv: h1 toevoegt*/
 
@@ -137,16 +131,6 @@
     color: white;
     height: 50vh;
     width: 100vw;
-}
-
-
-
-
-
-
-
-
-
 }
 
 
