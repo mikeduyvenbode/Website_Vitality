@@ -46,13 +46,27 @@
     <h1>Artiesten overzicht</h1>
   </section>
 
-  <div class= "blokje">
-    <p>test</p>
-</div>
+<section class="artiesten">
+  <?php
+        //stap 1
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "energy";
+        $conn = new mysqli($servername, $username, $password, $database);
+        if ($conn->connect_error) {
+            die("Connection failed " . $conn->connect_error);
+        }
+        $artiesten = "SELECT * FROM artiesten";
+        if ($result = $conn->query($artiesten)) {
+            while ($row = $result->fetch_array(MYSQLI_BOTH)) {
+                echo "<a class= 'jood'" . $row[0] . "'>" . $row[1] . "</a>" . "<br>";
+            }
+            $result->close();
+        }
+        ?>
+        </section>
 
-<div class= "blokje2">
-    <p>test</p>
-</div>
 
 
 
